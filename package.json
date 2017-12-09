@@ -7,9 +7,9 @@
   "license": "ISC",
   "scripts": {
     "start": "npm-run-all -p postcss watchify server",
-    "server": "browser-sync start --proxy sample.localhost --port 3000 --files \"./public/**/*.html,./public/**/*.php,./public/assets/css/style.css,./public/assets/js/bundle.js\"",
-    "postcss": "postcss --config config/postcss.json -o ./public/assets/css/style.css ./src/css/style.css -w",
-    "watchify": "watchify ./src/js/main.js -o ./public/assets/js/bundle.js -v wait;"
+    "server": "browser-sync start --proxy sample.localhost --port 3000 --files \"./**/*.html,./**/*.php,./assets/css/style.css,./assets/js/bundle.js\"",
+    "postcss": "postcss --config config/postcss.json -o ./assets/css/style.css ./npmSrc/css/style.css -w",
+    "watchify": "watchify ./npmSrc/js/main.js -o ./assets/js/bundle.js -v wait;"
   },
   "browserify": {
     "transform": [
